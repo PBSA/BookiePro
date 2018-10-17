@@ -210,6 +210,16 @@ const getAllSportsData = createSelector(
             bmgs = bmgs.map((bmg) => {
               let bmgID = bmg.get('id');
               return bmg.set('bettingMarkets', bettingMarketsWithOrderBook[bmgID]);
+            }).filter((bmg) => {
+              let description = bmg.get('description').toUpperCase();
+              let passesFilters = false;
+              
+              if ((description === 'MONEYLINE' ||
+                description === 'MATCH ODDS') && description !== 'FRIENDLY INTERNATIONAL') {
+                passesFilters = true;
+              }
+
+              return passesFilters;
             });
 
             bmgs = SportsbookUtils.sortAndCenter(bmgs);
