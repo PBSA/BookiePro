@@ -207,10 +207,7 @@ const getAllSportsData = createSelector(
           let bmgs = bmgsByEventID[e.get('id')];
 
           if(bmgs) {
-            bmgs = bmgs.map((bmg) => {
-              let bmgID = bmg.get('id');
-              return bmg.set('bettingMarkets', bettingMarketsWithOrderBook[bmgID]);
-            }).filter((bmg) => {
+            bmgs = bmgs.filter((bmg) => {
               let description = bmg.get('description').toUpperCase();
               let passesFilters = false;
               
@@ -220,6 +217,9 @@ const getAllSportsData = createSelector(
               }
 
               return passesFilters;
+            }).map((bmg) => {
+              let bmgID = bmg.get('id');
+              return bmg.set('bettingMarkets', bettingMarketsWithOrderBook[bmgID]);
             });
 
             bmgs = SportsbookUtils.sortAndCenter(bmgs);
