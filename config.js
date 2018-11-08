@@ -12,7 +12,7 @@ const config = {
         'wss://peerplaysblockchain.net/testnet/api' // houdini-witness
       ],
       faucetUrls: ['http://faucet.bookiepro.fun:5000'],
-      prefix: 'PPYTEST',
+      prefix: 'TEST',
       accounts: {
         broadcasts: {
           name: 'pbsa-broadcasts',
@@ -83,7 +83,7 @@ const config = {
   }
 };
 
-let current = 'dick'; // Set the current to dick by default.
+let current = 'elizabeth'; // Set the current to elizabeth by default.
 
 // Check to make sure a valid target is specified.
 if (process.env && process.env.TARGET && config.environments[process.env.TARGET]) {
