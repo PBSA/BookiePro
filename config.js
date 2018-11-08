@@ -90,9 +90,9 @@ if (process.env && process.env.TARGET && config.environments[process.env.TARGET]
   current = process.env.TARGET;
   console.log(`Environment defined as ${current}`);
 } else if (!process.env.TARGET) {
-  console.warn('Environment was not defined, using default. (dick)');
+  console.warn('Environment was not defined, using default. (' + current + ')');
 } else if (!config.environments[process.env.TARGET]) {
-  console.warn('Environment supplied is invalid, using default. (dick)');
+  console.warn('Environment supplied is invalid, using default. (' + current + ')');
 }
 
 // Export the current config with the additional name property.
