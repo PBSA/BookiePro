@@ -1,16 +1,15 @@
 const config = {
   environments: {
-    baxter: {
+    beatrice: {
       assetId: '1.3.1',
       apiEndpoints: [
         'wss://pta.blockveritas.co:8089', // taconator-witness
         'wss://bnode2.peerblock.trade', // bitcoinsig-test
-        'wss://ppytest.proxyhosts.info/wss', // tf-witness
         'wss://api.ppytest.nuevax.com', // nuevax-test
-        'wss://api.ppytest.blckchnd.com', // blckchnd-testnet
-        'wss://139.ip-54-38-243.eu', // melea-witness
-        'wss://api.test.ppy.us.altcap.io', // wwcd
-        'wss://baxter.ppy.steemul.ru:8080' // xtar-testnet
+        'wss://api.ppy-beatrice.blckchnd.com', // blckchnd-testnet
+        'wss://ip100.ip-54-37-165.eu/', // melea-witness
+        'wss://api.test.ppy.us.altcap.io', // winner.winner.chicken.dinner
+        'wss://peerplaysblockchain.net/testnet/api' // houdini-witness
       ],
       faucetUrls: ['http://faucet.bookiepro.fun:5000'],
       prefix: 'PPYTEST',
