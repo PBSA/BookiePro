@@ -27,10 +27,10 @@ const config = {
     charlie: {
       assetId: '1.3.1',
       apiEndpoints: [
-        'ws://ec2-35-182-244-143.ca-central-1.compute.amazonaws.com:8090'
+        'ws://ec2-35-183-78-0.ca-central-1.compute.amazonaws.com:8090'
       ],
-      faucetUrls: ['ws://ec2-35-182-244-143.ca-central-1.compute.amazonaws.com:5000'],
-      prefix: 'PPY',
+      faucetUrls: ['http://ec2-35-183-78-0.ca-central-1.compute.amazonaws.com:5000'],
+      prefix: 'TEST',
       accounts: {
         broadcasts: {
           name: 'pbsa-broadcasts',
@@ -48,7 +48,7 @@ const config = {
         'ws://ec2-35-182-93-168.ca-central-1.compute.amazonaws.com:8090'
       ],
       faucetUrls: ['http://ec2-35-182-93-168.ca-central-1.compute.amazonaws.com:5000'],
-      prefix: 'PPY',
+      prefix: 'TEST',
       accounts: {
         broadcasts: {
           name: 'pbsa-broadcasts',
@@ -63,12 +63,12 @@ const config = {
     elizabeth: {
       assetId: '1.3.1',
       apiEndpoints: [
-        'ws://ec2-35-182-42-231.ca-central-1.compute.amazonaws.com:8090', // Canada
+        'ws://ec2-35-183-70-167.ca-central-1.compute.amazonaws.com:8090', // Canada
         'ws://ec2-18-195-242-233.eu-central-1.compute.amazonaws.com:8090', // Frankfurt
         'ws://ec2-54-252-182-8.ap-southeast-2.compute.amazonaws.com:8090' // Sydney
       ],
-      faucetUrls: ['http://ec2-35-182-42-231.ca-central-1.compute.amazonaws.com:5000'],
-      prefix: 'PPY',
+      faucetUrls: ['http://ec2-35-183-70-167.ca-central-1.compute.amazonaws.com:5000'],
+      prefix: 'TEST',
       accounts: {
         broadcasts: {
           name: 'pbsa-broadcasts',
@@ -90,9 +90,9 @@ if (process.env && process.env.TARGET && config.environments[process.env.TARGET]
   current = process.env.TARGET;
   console.log(`Environment defined as ${current}`);
 } else if (!process.env.TARGET) {
-  console.warn('Environment was not defined, using default. (dick)')
+  console.warn('Environment was not defined, using default. (dick)');
 } else if (!config.environments[process.env.TARGET]) {
-  console.warn('Environment supplied is invalid, using default. (dick)')
+  console.warn('Environment supplied is invalid, using default. (dick)');
 }
 
 // Export the current config with the additional name property.
