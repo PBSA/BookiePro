@@ -11,7 +11,7 @@ const config = {
         'wss://api.test.ppy.us.altcap.io', // winner.winner.chicken.dinner
         'wss://peerplaysblockchain.net/testnet/api' // houdini-witness
       ],
-      faucetUrls: ['https://pbsa-beatrice-faucet.blockchainprojectsbv.com/faucet'],
+      faucetUrls: ['https://pbsa-beatrice-faucet.blockchainprojectsbv.com'],
       prefix: 'TEST',
       accounts: {
         broadcasts: {
