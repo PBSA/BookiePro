@@ -9,7 +9,8 @@ const config = {
         'wss://api.ppy-beatrice.blckchnd.com', // blckchnd-testnet
         'wss://ip100.ip-54-37-165.eu/', // melea-witness
         'wss://api.test.ppy.us.altcap.io', // winner.winner.chicken.dinner
-        'wss://peerplaysblockchain.net/testnet/api' // houdini-witness
+        'wss://peerplaysblockchain.net/testnet/api', // houdini-witness
+        'wss://api-beatrice01.eifos.org' // eifos-witness
       ],
       faucetUrls: ['https://pbsa-beatrice-faucet.blockchainprojectsbv.com'],
       prefix: 'TEST',
