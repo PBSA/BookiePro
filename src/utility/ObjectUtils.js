@@ -317,7 +317,7 @@ const betBelongsToBMG = function(state, theBetInQuestion, currentBMG) {
   bettingMarkets.forEach((bm) => {
     // When the BMG that the BM belongs to is found
     if (bm.get('group_id') === currentBMG) {
-      // Iterate through the bets... 
+      // Iterate through the bets...
       myBets.forEach((bet) => {
         // If the bet matches the bet in question, check to see if that bet belongs to the currently
         //  viewed betting market
@@ -332,6 +332,23 @@ const betBelongsToBMG = function(state, theBetInQuestion, currentBMG) {
   return betBelongs;
 };
 
+/**
+ * isEventCancelled
+ *
+ * @param {*} bettingMarketGroupResolvedTransaction
+ * @return {boolean} - Returns true if the bmgresolved transaction object has all of its betting
+ *                     markets in the cancelled state. Otherwise, false.
+ */
+const isBMGCancelled = (bettingMarketGroupResolvedTransaction) => {
+  const resolutions = bettingMarketGroupResolvedTransaction.getIn(['op', 1, 'resolutions']);
+  let allCancelled = true;
+  // If any one of the BM's is cancelled, then make the assumption that the BMG was cancelled.
+  for (let i = 0; i < resolutions.length; i++) {
+    if (resolutions[i][1] !== 'cancel') return false;
+  }
+  return allCancelled;
+}
+
 const ObjectUtils = {
   getStakeFromBetObject,
   getProfitLiabilityFromBetObject,
@@ -345,7 +362,8 @@ const ObjectUtils = {
   bettingMarketGroupStatus,
   isStatusUpdate,
   isMyBet,
-  betBelongsToBMG
+  betBelongsToBMG,
+  isBMGCancelled
 };
 
 export default ObjectUtils;

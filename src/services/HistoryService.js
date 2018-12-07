@@ -99,6 +99,11 @@ class HistoryService {
                 totalAmountWon += resolvedBet.get('amount_won');
               }
             });
+
+            if (ObjectUtils.isBMGCancelled(rawTransaction)) {
+              totalAmountWon += rawTransaction.getIn(['op', 1, 'winnings']);
+            }
+
             description = I18n.t('transaction.bettingMarketResolved');
             amount = totalAmountWon;
             precision = assetsById.getIn([Config.coreAsset, 'precision']);
