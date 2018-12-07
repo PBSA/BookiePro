@@ -56,10 +56,9 @@ const getEventGroupPageLoadingStatus = createSelector(
     getRelatedEventGroupId, 
     getEventGroupPageLoadingStatusByEventGroupId
   ],
-  (
-    relatedEventGroupId, 
-    eventGroupPageLoadingStatusByEventGroupId
-  ) => eventGroupPageLoadingStatusByEventGroupId.get(relatedEventGroupId)
+  (relatedEventGroupId, eventGroupPageLoadingStatusByEventGroupId) => {
+    eventGroupPageLoadingStatusByEventGroupId.get(relatedEventGroupId);
+  }
 );
 
 // Event group page data is in the following format
