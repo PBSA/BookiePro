@@ -65,7 +65,7 @@ export const translationsObject = {
       format: 'Choose Format',
       oddsFormat: 'Choose Odds Format',
       change_password: 'Change Password',
-      create_recovery_file: 'Download Password File',
+      create_recovery_file: 'Download Password',
       transaction_history: 'Transaction History',
       period: 'Period',
       date: 'Date',
