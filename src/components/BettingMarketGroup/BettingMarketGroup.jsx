@@ -76,9 +76,9 @@ class BettingMarketGroup extends PureComponent {
             eventStatusClassName={ this.props.eventStatus[0] }
           />
           <ComplexBettingWidget
-            bettingMarketGroupStatus={ this.props.bettingMarketGroupStatus[0] }
+            bettingMarketGroupStatus={ this.props.bettingMarketGroupStatus[1] }
             eventStatus={ this.props.eventStatus[0] }
-            bettingMarketGroupStatusClassName={ this.props.bettingMarketGroupStatus[1] }
+            bettingMarketGroupStatusClassName={ this.props.bettingMarketGroupStatus[0] }
             isLiveMarket={ this.props.isLiveMarket }
             marketData={ this.props.marketData }
             totalMatchedBetsAmount={ this.props.totalMatchedBetsAmount }

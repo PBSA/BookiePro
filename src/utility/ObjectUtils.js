@@ -216,6 +216,11 @@ const determineStatusResult = function(enumStatus) {
       break;
     }
 
+    case EventStatus.IN_PLAY: {
+      className = 'live';
+      break;
+    }
+
     case EventStatus.FROZEN: {
       className = 'stalled';
       break;
