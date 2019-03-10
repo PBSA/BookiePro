@@ -1,5 +1,7 @@
 # Bookie
 Desktop betting exchange application for the PeerPlays blockchain
+<details><summary>This repository has moved to https://github.com/peerplays-network</summary>
+<p>
 
 ## Install and Run
 Clone this repo and do the following:
@@ -27,3 +29,5 @@ The application will be opened as a web app (in a browser instance) and an Elect
 - Redux dev tools (allow user to debug )
 - ESlint (to ensure code style consistency)
 - LESS (CSS preprocessor)
+</p>
+</details>
